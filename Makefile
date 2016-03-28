@@ -1,4 +1,4 @@
-TARGETS=sslserver
+TARGETS=stunnel
 
 DEBUG?=0
 VERBOSE?=0
@@ -9,7 +9,7 @@ CFLAGS=-Wall -Werror -pthread
 LDFLAGS=-lssl -lcrypto -lpthread
 RM:=rm -f
 
-SRCS=sslserver.c
+SRCS=stunnel.c
 SRCS+=
 OBJS=${SRCS:.c=.o}
 
@@ -35,7 +35,7 @@ all: $(TARGETS)
 	$(echo-cmd) " CC    $@"
 	$(Q)$(CC) $(CFLAGS) -c $< -o $@
 
-sslserver: $(OBJS)
+stunnel: $(OBJS)
 	$(echo-cmd) " LD    $@"
 	$(Q)$(CC) $< $(LDFLAGS) -o $@
 

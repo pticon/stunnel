@@ -25,7 +25,7 @@
 
 /* Hardcoded values
  */
-#define PROGNAME    "sslserver"
+#define PROGNAME    "stunnel"
 #define BUFFERLEN   (1024 * 1024)
 #define TIMEOUT     60L
 
